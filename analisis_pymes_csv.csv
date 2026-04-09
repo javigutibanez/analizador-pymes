@@ -1,0 +1,6 @@
+﻿nombre,sector,facturacion,coste_ventas,empleados,deuda,activo_total,año_fundacion,margen_bruto_pct,ratio_endeudamiento,fact_por_empleado,años_activo
+Ferretería García,Ferretería,320000,210000,5,45000,180000,2008,34.4,0.25,64000.0,18
+Bar El Rincón,Hostelería,180000,95000,4,12000,85000,2015,47.2,0.14,45000.0,11
+Peluquería Ana,Peluquería,95000,38000,2,8000,40000,2019,60.0,0.2,47500.0,7
+Tienda Moda Sol,Moda,210000,140000,3,35000,120000,2012,33.3,0.29,70000.0,14
+Gestoría Pérez,Gestoría,140000,45000,3,5000,70000,2006,67.9,0.07,46667.0,20
