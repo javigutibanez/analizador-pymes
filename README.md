@@ -16,5 +16,11 @@ Versión 0.0 — análisis de una empresa individual con diccionario Python
 - Comparativa sectorial con groupby
 - Exporta resultados a CSV y Excel
 
-## Próximos pasos
-- Semana 4: generar ranking de oportunidades de inversión
+## Analizador de PYMEs v0.1 — completado Semana 4
+### Qué hace
+- Analiza 7 empresas de distintos sectores
+- Calcula 5 ratios financieros automáticamente
+- Asigna scoring de riesgo con pd.cut()
+- Genera ranking de oportunidades con puntuación 1-8
+- Exporta a Excel con dos hojas (Ranking y Datos)
+
