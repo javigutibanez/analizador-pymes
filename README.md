@@ -24,3 +24,13 @@ Versión 0.0 — análisis de una empresa individual con diccionario Python
 - Genera ranking de oportunidades con puntuación 1-8
 - Exporta a Excel con dos hojas (Ranking y Datos)
 
+----------------------------------------------------------------------
+
+## Analizador de PYMEs v0.2 — en progreso (Mes 2, semana 1)
+ 
+### Novedades respecto a v0.1
+- Análisis estadístico completo del conjunto (describe, std, percentiles)
+- Matriz de correlaciones entre variables financieras
+- Análisis estadístico por sector (media, mediana, dispersión)
+- Scoring por percentiles — más robusto que el scoring manual
+- 9 empresas de 7 sectores distintos
