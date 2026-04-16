@@ -26,11 +26,22 @@ Versión 0.0 — análisis de una empresa individual con diccionario Python
 
 ----------------------------------------------------------------------
 
-## Analizador de PYMEs v0.2 — en progreso (Mes 2, semana 1)
- 
+## Analizador de PYMEs v0.2 — en progreso (Mes 2, semana 2)
+
 ### Novedades respecto a v0.1
 - Análisis estadístico completo del conjunto (describe, std, percentiles)
 - Matriz de correlaciones entre variables financieras
 - Análisis estadístico por sector (media, mediana, dispersión)
 - Scoring por percentiles — más robusto que el scoring manual
 - 9 empresas de 7 sectores distintos
+- Dashboard visual con 4 gráficos matplotlib: ranking, scatter, histogramas, comparativa sectorial
+
+## Dashboard visual
+
+![Dashboard PYMEs v0.2](dashboard_pymes_v02.png)
+
+El dashboard incluye:
+- Ranking de oportunidades coloreado por nivel de riesgo
+- Mapa de margen vs deuda (scatter plot)
+- Distribución estadística del margen bruto (histograma)
+- Score medio por sector (comparativa sectorial)
