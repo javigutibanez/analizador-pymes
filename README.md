@@ -58,3 +58,44 @@ Novedades respecto a Semana 2
 - Gráficos HTML interactivos: hover, zoom y filtrado por sector desde la leyenda
 - Radar chart con normalización de variables para comparativa multidimensional
 - Dashboard interactivo exportable y compartible como archivo HTML
+
+## Visualización interactiva — Semana 4
+### Novedades respecto a Semana 3
+- Descarga de datos fundamentales de empresas cotizadas comparables vía yfinance
+- Fusión de PYMEs y cotizadas en un único DataFrame con columna tipo
+- Gráfico comparativo interactivo de márgenes PYMEs vs cotizadas por sector
+- Valoraciones orientativas por comparables sectoriales con descuento de liquidez del 30%
+- Exportación a Excel con 4 hojas: Ranking v0.2, Estadística, Por sector, Valoraciones
+
+### Comparables sectoriales utilizados
+| Sector | Cotizada | Ticker |
+|---|---|---|
+| Hostelería | McDonald's | MCD |
+| Moda | Inditex | ITX.MC |
+| Salud | Fresenius | FRE.DE |
+| Educación | Pearson | PSO |
+| Ferretería | Fastenal | FAST |
+| Gestoría | H&R Block | HRB |
+
+### Archivos de esta semana
+- **analizador_pymes_v02.xlsx** — Excel con 4 hojas listo para entregar a un inversor
+- **comparativa_pymes_cotizadas.html** — Gráfico interactivo PYMEs vs cotizadas por sector
+
+## ANALIZADOR DE PYMEs v0.2 - COMPLETADO MES 2
+
+### Qué hace
+- Analiza 9 empresas de 7 sectores distintos
+- Calcula 5 ratios financieros automáticamente
+- Estadística descriptiva completa: media, mediana, desviación, percentiles
+- Análisis de correlaciones entre variables financieras
+- Scoring estadístico por percentiles (más robusto que umbrales manuales)
+- Dashboard visual con 4 gráficos: ranking, scatter, histogramas, sectorial
+- Dashboard interactivo en HTML con Plotly
+- Comparativas sectoriales: márgenes de PYMEs vs cotizadas del mismo sector
+- Valoraciones orientativas usando PER sectorial con descuento de liquidez
+- Exporta a Excel con 4 hojas y a HTML interactivo
+ 
+### Próxima versión (Mes 3)
+- Series temporales: datos de varios años en lugar de un snapshot
+- Proyección de KPIs a 12 meses con Prophet
+- Detección de estacionalidad en los ingresos
