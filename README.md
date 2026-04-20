@@ -99,3 +99,19 @@ Novedades respecto a Semana 2
 - Series temporales: datos de varios años en lugar de un snapshot
 - Proyección de KPIs a 12 meses con Prophet
 - Detección de estacionalidad en los ingresos
+
+## Analizador de PYMEs v0.3 — MES 3
+
+Semana 1 
+### Novedades de esta semana
+- Dataset temporal con 3 años de datos históricos por empresa (2022-2024)
+- Operaciones con DatetimeIndex: filtrado por fecha, crecimiento interanual y media móvil
+- Visualización de la evolución de facturación y márgenes por empresa (2 gráficos)
+- Ranking de calidad de crecimiento — CAGR × margen como índice compuesto
+- Proyección simple de facturación a 2025 basada en CAGR histórico
+
+### Archivos de esta semana
+- **evolucion_facturacion.png** — Panel 3x3 con la evolución de cada empresa
+- **evolucion_margenes.png** — Evolución comparada de márgenes de las 9 empresas
+
+Semana 2
