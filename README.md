@@ -115,3 +115,33 @@ Semana 1
 - **evolucion_margenes.png** — Evolución comparada de márgenes de las 9 empresas
 
 Semana 2
+markdown## Analizador de PYMEs v0.3 — Semana 2 en progreso
+
+### Novedades de esta semana
+- Instalación de Prophet — librería de series temporales de Meta (Facebook)
+- Primera proyección de facturación a 12 meses con intervalos de confianza al 80%
+- Proyección automatizada en bucle para las 9 empresas simultáneamente
+- Tabla de escenarios — pesimista, central y optimista por empresa
+- Corrección de escala: datos anuales convertidos a mensuales para Prophet
+
+### Nota técnica
+Los datos históricos son anuales. Prophet trabaja con frecuencia mensual (`freq='MS'`),
+por lo que los datos se dividen entre 12 al entrenar y la proyección resultante
+es directamente comparable con la facturación anual de 2024.
+
+### Archivos de esta semana
+- **proyeccion_prophet.png** — Gráfico automático de Prophet de la empresa con mejor CAGR
+- **proyeccion_limpia.png** — Gráfico personalizado con banda de confianza al 80%
+
+### Proyección a 12 meses — escenario central
+| Empresa | Fact. 2024 | Central proyectado | Crecimiento |
+|---|---|---|---|
+| Ferretería García | 320.000€ | 326.504€ | +2.0% |
+| Clínica Dental García | 295.000€ | 301.504€ | +2.2% |
+| Clínica Dental Martínez | 280.000€ | 286.504€ | +2.3% |
+| Tienda Moda Sol | 210.000€ | 214.336€ | +2.1% |
+| Bar El Rincón | 180.000€ | 184.336€ | +2.4% |
+| Academia Idiomas Sol | 160.000€ | 164.336€ | +2.7% |
+| Academia English House | 155.000€ | 159.878€ | +3.1% |
+| Gestoría Pérez | 140.000€ | 143.794€ | +2.7% |
+| Peluquería Ana | 95.000€ | 97.710€ | +2.9% |
