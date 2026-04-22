@@ -102,7 +102,7 @@ Novedades respecto a Semana 2
 
 ## Analizador de PYMEs v0.3 — MES 3
 
-Semana 1 
+SEMANA 1 
 ### Novedades de esta semana
 - Dataset temporal con 3 años de datos históricos por empresa (2022-2024)
 - Operaciones con DatetimeIndex: filtrado por fecha, crecimiento interanual y media móvil
@@ -114,8 +114,8 @@ Semana 1
 - **evolucion_facturacion.png** — Panel 3x3 con la evolución de cada empresa
 - **evolucion_margenes.png** — Evolución comparada de márgenes de las 9 empresas
 
-Semana 2
-markdown## Analizador de PYMEs v0.3 — Semana 2 en progreso
+SEMANA 2
+markdown## Analizador de PYMEs v0.3 — Semana 2 
 
 ### Novedades de esta semana
 - Instalación de Prophet — librería de series temporales de Meta (Facebook)
@@ -145,3 +145,29 @@ es directamente comparable con la facturación anual de 2024.
 | Academia English House | 155.000€ | 159.878€ | +3.1% |
 | Gestoría Pérez | 140.000€ | 143.794€ | +2.7% |
 | Peluquería Ana | 95.000€ | 97.710€ | +2.9% |
+
+SEMANA 3
+## Analizador de PYMEs v0.3 — Semana 3 
+
+### Novedades de esta semana
+- Detección de anomalías estáticas con z-score — compara las 9 empresas entre sí en 2024
+- Bandas de control temporales — detecta cambios bruscos en el margen histórico de cada empresa
+- Sistema de alertas consolidado con nivel de riesgo por empresa (Alto / Medio / Bajo)
+- Exportación a Excel con 3 hojas: resumen de alertas, detalle z-score y proyecciones Prophet
+
+### Resultados del sistema de alertas — z-score 2024
+| Empresa | Variable | Valor | Z-score | Tipo |
+|---|---|---|---|---|
+| Academia English House | crecimiento_pct | 6.2% | +1.81 | ALTO |
+| Tienda Moda Sol | margen_bruto_pct | 33.3% | -1.61 | BAJO |
+| Ferretería García | facturacion | 320.000€ | +1.58 | ALTO |
+| Ferretería García | margen_bruto_pct | 34.4% | -1.53 | BAJO |
+
+### Interpretación
+- **Academia English House** — crecimiento más alto del portfolio, señal positiva a seguir
+- **Tienda Moda Sol** — margen más bajo del conjunto, perfil más débil del portfolio
+- **Ferretería García** — empresa más grande pero con margen estructuralmente bajo para su sector
+
+### Archivos de esta semana
+- **alertas_pymes_v03.xlsx** — 3 hojas: Resumen alertas, Alertas z-score, Proyecciones
+- **analizador_pymes_v03_s3.ipynb** — notebook actualizado con bloques 38-40
