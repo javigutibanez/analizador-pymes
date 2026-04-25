@@ -101,73 +101,16 @@ Novedades respecto a Semana 2
 - Detección de estacionalidad en los ingresos
 
 ## Analizador de PYMEs v0.3 — MES 3
+### Novedades respecto a v0.2
+- Dataset temporal con 4 años de datos por empresa (2022-2025)
+- Análisis de crecimiento compuesto (CAGR) e índice de calidad de crecimiento
+- Proyección a 12 meses con Prophet e intervalos de confianza al 80%
+- Tres escenarios por empresa: pesimista, central y optimista
+- Detección automática de anomalías con z-score y bandas de control
+- Dashboard temporal completo con 4 paneles
+- Excel v0.3 con 4 hojas: ranking, crecimiento, proyecciones y alertas
 
-SEMANA 1 
-### Novedades de esta semana
-- Dataset temporal con 3 años de datos históricos por empresa (2022-2024)
-- Operaciones con DatetimeIndex: filtrado por fecha, crecimiento interanual y media móvil
-- Visualización de la evolución de facturación y márgenes por empresa (2 gráficos)
-- Ranking de calidad de crecimiento — CAGR × margen como índice compuesto
-- Proyección simple de facturación a 2025 basada en CAGR histórico
+### Próxima versión (Mes 4)
+- Backtesting: ¿habría funcionado el scoring en datos históricos?
+- Validación del modelo con vectorbt
 
-### Archivos de esta semana
-- **evolucion_facturacion.png** — Panel 3x3 con la evolución de cada empresa
-- **evolucion_margenes.png** — Evolución comparada de márgenes de las 9 empresas
-
-SEMANA 2
-markdown## Analizador de PYMEs v0.3 — Semana 2 
-
-### Novedades de esta semana
-- Instalación de Prophet — librería de series temporales de Meta (Facebook)
-- Primera proyección de facturación a 12 meses con intervalos de confianza al 80%
-- Proyección automatizada en bucle para las 9 empresas simultáneamente
-- Tabla de escenarios — pesimista, central y optimista por empresa
-- Corrección de escala: datos anuales convertidos a mensuales para Prophet
-
-### Nota técnica
-Los datos históricos son anuales. Prophet trabaja con frecuencia mensual (`freq='MS'`),
-por lo que los datos se dividen entre 12 al entrenar y la proyección resultante
-es directamente comparable con la facturación anual de 2024.
-
-### Archivos de esta semana
-- **proyeccion_prophet.png** — Gráfico automático de Prophet de la empresa con mejor CAGR
-- **proyeccion_limpia.png** — Gráfico personalizado con banda de confianza al 80%
-
-### Proyección a 12 meses — escenario central
-| Empresa | Fact. 2024 | Central proyectado | Crecimiento |
-|---|---|---|---|
-| Ferretería García | 320.000€ | 326.504€ | +2.0% |
-| Clínica Dental García | 295.000€ | 301.504€ | +2.2% |
-| Clínica Dental Martínez | 280.000€ | 286.504€ | +2.3% |
-| Tienda Moda Sol | 210.000€ | 214.336€ | +2.1% |
-| Bar El Rincón | 180.000€ | 184.336€ | +2.4% |
-| Academia Idiomas Sol | 160.000€ | 164.336€ | +2.7% |
-| Academia English House | 155.000€ | 159.878€ | +3.1% |
-| Gestoría Pérez | 140.000€ | 143.794€ | +2.7% |
-| Peluquería Ana | 95.000€ | 97.710€ | +2.9% |
-
-SEMANA 3
-## Analizador de PYMEs v0.3 — Semana 3 
-
-### Novedades de esta semana
-- Detección de anomalías estáticas con z-score — compara las 9 empresas entre sí en 2024
-- Bandas de control temporales — detecta cambios bruscos en el margen histórico de cada empresa
-- Sistema de alertas consolidado con nivel de riesgo por empresa (Alto / Medio / Bajo)
-- Exportación a Excel con 3 hojas: resumen de alertas, detalle z-score y proyecciones Prophet
-
-### Resultados del sistema de alertas — z-score 2024
-| Empresa | Variable | Valor | Z-score | Tipo |
-|---|---|---|---|---|
-| Academia English House | crecimiento_pct | 6.2% | +1.81 | ALTO |
-| Tienda Moda Sol | margen_bruto_pct | 33.3% | -1.61 | BAJO |
-| Ferretería García | facturacion | 320.000€ | +1.58 | ALTO |
-| Ferretería García | margen_bruto_pct | 34.4% | -1.53 | BAJO |
-
-### Interpretación
-- **Academia English House** — crecimiento más alto del portfolio, señal positiva a seguir
-- **Tienda Moda Sol** — margen más bajo del conjunto, perfil más débil del portfolio
-- **Ferretería García** — empresa más grande pero con margen estructuralmente bajo para su sector
-
-### Archivos de esta semana
-- **alertas_pymes_v03.xlsx** — 3 hojas: Resumen alertas, Alertas z-score, Proyecciones
-- **analizador_pymes_v03_s3.ipynb** — notebook actualizado con bloques 38-40
